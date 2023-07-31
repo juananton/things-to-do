@@ -1,0 +1,16 @@
+.category {
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.principal {
+  background-color: lightblue;
+}
+
+.dessert {
+  background-color: lightpink;
+}
+
+.snack {
+  background-color: lightgreen;
+}
