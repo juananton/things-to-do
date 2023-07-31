@@ -1,6 +1,13 @@
 .wrapper {
-  width: 500px;
+  width: 600px;
   max-width: 100%;
   margin: auto;
   padding: 0 1rem;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
