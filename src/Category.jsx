@@ -1,12 +1,12 @@
 import style from './Category.module.css';
 
-const Category = ({ category }) => {
-  const CATEGORIES = {
-    principal: ['Principal', style.principal],
-    dessert: ['Postre', style.dessert],
-    snack: ['Snack', style.snack],
-  };
+const CATEGORIES = {
+  principal: ['Principal', style.principal],
+  dessert: ['Postre', style.dessert],
+  snack: ['Snack', style.snack],
+};
 
+const Category = ({ category }) => {
   const [categoryName, categoryClassName] = CATEGORIES[category];
 
   return (
