@@ -1,4 +1,4 @@
-import RecipesList from './recipesList';
+import RecipesManager from './Manager';
 
 const RECIPES = [
   {
@@ -32,7 +32,7 @@ const RECIPES = [
 ];
 
 function App() {
-  return <RecipesList recipes={RECIPES} />;
+  return <RecipesManager recipes={RECIPES} />;
 }
 
 export default App;

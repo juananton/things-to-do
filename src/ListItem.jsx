@@ -1,5 +1,5 @@
 import Category from './Category';
-import style from './RecipeListItem.module.css';
+import style from './ListItem.module.css';
 
 const RecipeListItem = ({ recipe }) => {
   return (
