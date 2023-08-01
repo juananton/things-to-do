@@ -2,29 +2,33 @@ import RecipesManager from './Manager';
 
 const RECIPES = [
   {
+    id: 0,
     name: 'Lentejas',
-    ingredientes: 'Listado de ingredientes',
+    ingredients: 'Listado de ingredientes',
     preparation: 'Instrucciones de preparación',
     time: '1h',
     category: 'principal',
   },
   {
+    id: 1,
     name: 'Yogur con frutas',
-    ingredientes: 'Listado de ingredientes',
+    ingredients: 'Listado de ingredientes',
     preparation: 'Instrucciones de preparación',
     time: '30min',
     category: 'dessert',
   },
   {
+    id: 2,
     name: 'Bacalao con pimientos',
-    ingredientes: 'Listado de ingredientes',
+    ingredients: 'Listado de ingredientes',
     preparation: 'Instrucciones de preparación',
     time: '1h',
     category: 'principal',
   },
   {
+    id: 3,
     name: 'Carne con verduras',
-    ingredientes: 'Listado de ingredientes',
+    ingredients: 'Listado de ingredientes',
     preparation: 'Instrucciones de preparación',
     time: '30min',
     category: 'snack',

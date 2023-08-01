@@ -4,8 +4,7 @@ import style from './Manager.module.css';
 import ManagerToolbar from './ManagerToolbar';
 
 const RecipesManager = ({ recipes }) => {
-  const [search, setSearch] = useState('');
-  const [filterBy, setFilterBy] = useState('all');
+  const { search, filterBy, setSearch, setFilterBy } = useFilters();
 
   let recipesFiltered = filterRecipesByName(recipes, search);
   recipesFiltered = filterByCategory(recipesFiltered, filterBy);
@@ -22,6 +21,18 @@ const RecipesManager = ({ recipes }) => {
       <List recipes={recipesFiltered} />
     </div>
   );
+};
+
+const useFilters = () => {
+  const [search, setSearch] = useState('');
+  const [filterBy, setFilterBy] = useState('all');
+
+  return {
+    search,
+    filterBy,
+    setSearch,
+    setFilterBy,
+  };
 };
 
 const filterRecipesByName = (recipes, search) => {
