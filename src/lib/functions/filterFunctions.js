@@ -1,4 +1,4 @@
-export const filterByName = (data, search) => {
+export const searchByName = (data, search) => {
   if (!search) return [...data];
 
   const lowerCasedSearch = search.toLocaleLowerCase();

@@ -3,14 +3,14 @@ import style from './Manager.module.css';
 import ManagerToolbar from './ManagerToolbar';
 import {
   filterByCategory,
-  filterByName,
+  searchByName,
 } from './lib/functions/filterFunctions';
 import { useFilters } from './lib/hooks/useFilters';
 
 const RecipesManager = ({ data }) => {
   const { search, filterBy, setSearch, setFilterBy } = useFilters();
 
-  let dataFiltered = filterByName(data, search);
+  let dataFiltered = searchByName(data, search);
   dataFiltered = filterByCategory(dataFiltered, filterBy);
 
   return (
