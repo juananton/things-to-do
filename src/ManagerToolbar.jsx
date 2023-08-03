@@ -1,10 +1,11 @@
 import style from './ManagerToolbar.module.css';
+import InputSearch from './forms/InputSearch';
 
 const ManagerToolbar = ({ search, setSearch, filterBy, setFilterBy }) => {
   return (
     <form className={style.form}>
-      <input
-        type='text'
+      <InputSearch
+        placeholder='Buscar...'
         value={search}
         onChange={ev => setSearch(ev.target.value)}
       />
