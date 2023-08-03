@@ -1,4 +1,5 @@
 import style from './ManagerToolbar.module.css';
+import { CATEGORIES } from './constants/categories';
 import InputSearch from './forms/InputSearch';
 import Select from './forms/Select';
 
@@ -12,9 +13,11 @@ const ManagerToolbar = ({ search, setSearch, filterBy, setFilterBy }) => {
       />
       <Select value={filterBy} onChange={ev => setFilterBy(ev.target.value)}>
         <option value={'all'}>Todas</option>
-        <option value={'principal'}>Principal</option>
-        <option value={'dessert'}>Postre</option>
-        <option value={'snack'}>Snack</option>
+        {Object.values(CATEGORIES).map(cat => (
+          <option key={cat} value={cat}>
+            {cat}
+          </option>
+        ))}
       </Select>
     </form>
   );

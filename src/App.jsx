@@ -1,4 +1,5 @@
 import RecipesManager from './Manager';
+import { CATEGORIES } from './constants/categories';
 
 const RECIPES = [
   {
@@ -7,7 +8,7 @@ const RECIPES = [
     ingredients: 'Listado de ingredientes',
     preparation: 'Instrucciones de preparación',
     time: '1h',
-    category: 'principal',
+    category: CATEGORIES.CAT1,
   },
   {
     id: 1,
@@ -15,7 +16,7 @@ const RECIPES = [
     ingredients: 'Listado de ingredientes',
     preparation: 'Instrucciones de preparación',
     time: '30min',
-    category: 'dessert',
+    category: CATEGORIES.CAT2,
   },
   {
     id: 2,
@@ -23,15 +24,15 @@ const RECIPES = [
     ingredients: 'Listado de ingredientes',
     preparation: 'Instrucciones de preparación',
     time: '1h',
-    category: 'principal',
+    category: CATEGORIES.CAT1,
   },
   {
     id: 3,
-    name: 'Carne con verduras',
+    name: 'Verduras con bacalao',
     ingredients: 'Listado de ingredientes',
     preparation: 'Instrucciones de preparación',
     time: '30min',
-    category: 'snack',
+    category: CATEGORIES.CAT3,
   },
 ];
 
