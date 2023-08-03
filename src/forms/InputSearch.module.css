@@ -15,6 +15,7 @@ input::placeholder {
 }
 
 .icon {
+  pointer-events: none;
   height: 1.25 + rem;
   width: 1.25rem;
   left: 1rem;
