@@ -3,15 +3,15 @@ import style from './Manager.module.css';
 import ManagerToolbar from './ManagerToolbar';
 import {
   filterByCategory,
-  filterRecipesByName,
+  filterByName,
 } from './lib/functions/filterFunctions';
 import { useFilters } from './lib/hooks/useFilters';
 
-const RecipesManager = ({ recipes }) => {
+const RecipesManager = ({ data }) => {
   const { search, filterBy, setSearch, setFilterBy } = useFilters();
 
-  let recipesFiltered = filterRecipesByName(recipes, search);
-  recipesFiltered = filterByCategory(recipesFiltered, filterBy);
+  let dataFiltered = filterByName(data, search);
+  dataFiltered = filterByCategory(dataFiltered, filterBy);
 
   return (
     <div className={style.wrapper}>
@@ -22,7 +22,7 @@ const RecipesManager = ({ recipes }) => {
         filterBy={filterBy}
         setFilterBy={setFilterBy}
       />
-      <List recipes={recipesFiltered} />
+      <List data={dataFiltered} />
     </div>
   );
 };

@@ -1,15 +1,15 @@
 import Category from './Category';
 import style from './ListItem.module.css';
 
-const RecipeListItem = ({ recipe }) => {
+const ListItem = ({ item }) => {
   return (
     <div className={style.row}>
       <div className={style.data}>
-        <span className={style.name}>{recipe.name}</span>
-        <span>{recipe.time}</span>
+        <span className={style.name}>{item.name}</span>
+        <span>{item.time}</span>
       </div>
       <div className={style.category}>
-        <Category category={recipe.category} />
+        <Category category={item.category} />
       </div>
       <div className={style.tools}>
         <span>Edit</span>
@@ -18,4 +18,4 @@ const RecipeListItem = ({ recipe }) => {
   );
 };
 
-export default RecipeListItem;
+export default ListItem;

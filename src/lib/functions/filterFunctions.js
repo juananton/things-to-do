@@ -1,15 +1,15 @@
-export const filterRecipesByName = (recipes, search) => {
-  if (!search) return [...recipes];
+export const filterByName = (data, search) => {
+  if (!search) return [...data];
 
   const lowerCasedSearch = search.toLocaleLowerCase();
 
-  return recipes.filter(recipe =>
-    recipe.name.toLowerCase().includes(lowerCasedSearch)
+  return data.filter(item =>
+    item.name.toLowerCase().includes(lowerCasedSearch)
   );
 };
 
-export const filterByCategory = (recipes, filterBy) => {
-  if (filterBy === 'all') return [...recipes];
+export const filterByCategory = (data, filterBy) => {
+  if (filterBy === 'all') return [...data];
 
-  return recipes.filter(recipe => recipe.category === filterBy);
+  return data.filter(item => item.category === filterBy);
 };

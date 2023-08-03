@@ -1,7 +1,7 @@
 import RecipesManager from './Manager';
 import { CATEGORIES } from './constants/categories';
 
-const RECIPES = [
+const DATA = [
   {
     id: 0,
     name: 'Lentejas',
@@ -37,7 +37,7 @@ const RECIPES = [
 ];
 
 function App() {
-  return <RecipesManager recipes={RECIPES} />;
+  return <RecipesManager data={DATA} />;
 }
 
 export default App;
