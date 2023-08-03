@@ -41,7 +41,7 @@ const filterRecipesByName = (recipes, search) => {
   const lowerCasedSearch = search.toLocaleLowerCase();
 
   return recipes.filter(recipe =>
-    recipe.name.toLowerCase().startsWith(lowerCasedSearch)
+    recipe.name.toLowerCase().includes(lowerCasedSearch)
   );
 };
 
