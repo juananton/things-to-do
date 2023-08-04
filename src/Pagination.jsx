@@ -1,3 +1,5 @@
+import SearchIcon from './Icons/SearchIcon';
+import IconButton from './buttons/IconButton';
 import Select from './forms/Select';
 import style from './pagination.module.css';
 
@@ -14,6 +16,9 @@ const Pagination = ({ page, itemsPerPage, setPage, setItemsPerPage }) => {
           <option value={3}>3</option>
         </Select>
         <p>Elementos por página</p>
+      </div>
+      <div className={style.pages}>
+        <IconButton kind='red' filled icon={SearchIcon} />
       </div>
     </div>
   );
