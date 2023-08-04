@@ -7,7 +7,7 @@ const DATA = [
     name: 'Lentejas',
     ingredients: 'Listado de ingredientes',
     preparation: 'Instrucciones de preparación',
-    time: '1h',
+    time: '45',
     category: CATEGORIES.CAT1,
   },
   {
@@ -15,7 +15,7 @@ const DATA = [
     name: 'Yogur con frutas',
     ingredients: 'Listado de ingredientes',
     preparation: 'Instrucciones de preparación',
-    time: '30min',
+    time: '30',
     category: CATEGORIES.CAT2,
   },
   {
@@ -23,7 +23,7 @@ const DATA = [
     name: 'Bacalao con pimientos',
     ingredients: 'Listado de ingredientes',
     preparation: 'Instrucciones de preparación',
-    time: '1h',
+    time: '25',
     category: CATEGORIES.CAT1,
   },
   {
@@ -31,13 +31,13 @@ const DATA = [
     name: 'Verduras con bacalao',
     ingredients: 'Listado de ingredientes',
     preparation: 'Instrucciones de preparación',
-    time: '30min',
+    time: '30',
     category: CATEGORIES.CAT3,
   },
 ];
 
 function App() {
-  return <RecipesManager data={DATA} />;
+  return <RecipesManager rawData={DATA} />;
 }
 
 export default App;
