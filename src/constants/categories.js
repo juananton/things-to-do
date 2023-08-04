@@ -3,3 +3,5 @@ export const CATEGORIES = {
   CAT2: 'Postre',
   CAT3: 'Snack',
 };
+
+export const ALL_CATEGORIES = 'Todas';
