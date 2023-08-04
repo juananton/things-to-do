@@ -1,0 +1,9 @@
+.name {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.time {
+  color: var(--color-gray);
+  font-size: 0.875rem;
+}
