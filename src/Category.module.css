@@ -1,16 +1,16 @@
 .category {
-  padding: 0.25rem;
-  border-radius: 0.25rem;
+  padding: 0.375rem 0.5rem;
+  border-radius: var(--radius-sm);
 }
 
 .principal {
-  background-color: lightblue;
+  background-color: var(--color-lightblue);
 }
 
 .dessert {
-  background-color: lightpink;
+  background-color: var(--color-lightred);
 }
 
 .snack {
-  background-color: lightgreen;
+  background-color: var(--color-lightyellow);
 }

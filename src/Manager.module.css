@@ -1,6 +1,10 @@
 .wrapper {
-  width: 600px;
+  width: 640px;
   max-width: 100%;
   margin: auto;
   padding: 0 1rem;
+}
+
+.title {
+  font-size: var(--title-1);
 }
