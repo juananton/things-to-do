@@ -1,12 +1,12 @@
 {
-  "DATA": [
+  "rawData": [
     {
       "id": 0,
       "name": "Lentejas",
       "ingredients": "Listado de ingredientes",
       "preparation": "Instrucciones de preparación",
       "time": "45",
-      "category": "CATEGORIES.CAT1"
+      "category": "Principal"
     },
     {
       "id": 1,
@@ -14,7 +14,7 @@
       "ingredients": "Listado de ingredientes",
       "preparation": "Instrucciones de preparación",
       "time": "30",
-      "category": "CATEGORIES.CAT2"
+      "category": "Postre"
     },
     {
       "id": 2,
@@ -22,7 +22,7 @@
       "ingredients": "Listado de ingredientes",
       "preparation": "Instrucciones de preparación",
       "time": "25",
-      "category": "CATEGORIES.CAT1"
+      "category": "Principal"
     },
     {
       "id": 3,
@@ -30,7 +30,7 @@
       "ingredients": "Listado de ingredientes",
       "preparation": "Instrucciones de preparación",
       "time": "30",
-      "category": "CATEGORIES.CAT3"
+      "category": "Snack"
     }
   ]
 }

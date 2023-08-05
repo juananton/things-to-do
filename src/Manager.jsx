@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import List from './List';
 import style from './Manager.module.css';
 import ManagerToolbar from './ManagerToolbar';
@@ -9,11 +10,11 @@ import {
 } from './lib/functions/filterFunctions';
 import { useFilters } from './lib/hooks/useFilters';
 
-const Manager = ({ rawData }) => {
+const Manager = () => {
   const { filters, setSearch, setFilterBy, setPage, setItemsPerPage } =
     useFilters();
 
-  const { data, totalPages } = getData(rawData, filters);
+  const { data, totalPages } = useRawData(filters);
 
   return (
     <div className={style.wrapper}>
@@ -36,15 +37,23 @@ const Manager = ({ rawData }) => {
   );
 };
 
-const getData = (rawData, { search, filterBy, page, itemsPerPage }) => {
-  let dataFiltered = searchByName(rawData, search);
-  dataFiltered = filterByCategory(dataFiltered, filterBy);
+const useRawData = ({ search, filterBy, page, itemsPerPage }) => {
+  const [rawData, setRawData] = useState([]);
 
-  const totalPages = Math.ceil(dataFiltered.length / itemsPerPage);
+  useEffect(() => {
+    fetch('http://localhost:4001/rawData')
+      .then(res => res.json())
+      .then(data => setRawData(data));
+  }, []);
 
-  dataFiltered = paginate(dataFiltered, page, itemsPerPage);
+  let filteredData = searchByName(rawData, search);
+  filteredData = filterByCategory(filteredData, filterBy);
 
-  return { data: dataFiltered, totalPages };
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+  filteredData = paginate(filteredData, page, itemsPerPage);
+
+  return { data: filteredData, totalPages };
 };
 
 export default Manager;
