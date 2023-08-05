@@ -19,6 +19,9 @@ export const filterByCategory = (data, filterBy) => {
 export const paginate = (data, page, itemsPerPage) => {
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
+  const totalPages = Math.ceil(data.length / itemsPerPage);
 
-  return data.slice(startIndex, endIndex);
+  const paginatedData = data.slice(startIndex, endIndex);
+
+  return { paginatedData, totalPages };
 };

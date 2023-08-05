@@ -1,20 +1,15 @@
-import { useEffect, useState } from 'react';
 import List from './List';
 import style from './Manager.module.css';
 import ManagerToolbar from './ManagerToolbar';
 import Pagination from './Pagination';
-import {
-  filterByCategory,
-  paginate,
-  searchByName,
-} from './lib/functions/filterFunctions';
+import { useData } from './lib/hooks/useData';
 import { useFilters } from './lib/hooks/useFilters';
 
 const Manager = () => {
   const { filters, setSearch, setFilterBy, setPage, setItemsPerPage } =
     useFilters();
 
-  const { data, totalPages } = useRawData(filters);
+  const { paginatedData, totalPages } = useData(filters);
 
   return (
     <div className={style.wrapper}>
@@ -25,7 +20,7 @@ const Manager = () => {
         filterBy={filters.filterBy}
         setFilterBy={setFilterBy}
       />
-      <List data={data} />
+      <List paginatedData={paginatedData} />
       <Pagination
         page={filters.page}
         itemsPerPage={filters.itemsPerPage}
@@ -35,33 +30,6 @@ const Manager = () => {
       />
     </div>
   );
-};
-
-const fetchRawData = async (setRawData, signal) => {
-  const res = await fetch('http://localhost:4001/rawData', { signal });
-  const data = await res.json();
-  setRawData(data);
-};
-
-const useRawData = ({ search, filterBy, page, itemsPerPage }) => {
-  const [rawData, setRawData] = useState([]);
-
-  useEffect(() => {
-    const controller = new AbortController();
-
-    fetchRawData(setRawData, controller.signal);
-
-    return () => controller.abort();
-  }, []);
-
-  let filteredData = searchByName(rawData, search);
-  filteredData = filterByCategory(filteredData, filterBy);
-
-  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
-
-  filteredData = paginate(filteredData, page, itemsPerPage);
-
-  return { data: filteredData, totalPages };
 };
 
 export default Manager;
