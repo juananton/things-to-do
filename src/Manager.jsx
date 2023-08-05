@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import List from './List';
 import style from './Manager.module.css';
 import ManagerToolbar from './ManagerToolbar';
@@ -11,28 +10,27 @@ import {
 import { useFilters } from './lib/hooks/useFilters';
 
 const Manager = ({ rawData }) => {
-  const { search, filterBy, setSearch, setFilterBy } = useFilters();
+  const { filters, setSearch, setFilterBy, setPage, setItemsPerPage } =
+    useFilters();
 
-  const [page, setPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(2);
-
-  const data = getData(rawData, { search, filterBy, page, itemsPerPage });
+  const { data, totalPages } = getData(rawData, filters);
 
   return (
     <div className={style.wrapper}>
       <h1 className={style.title}>Recetas</h1>
       <ManagerToolbar
-        search={search}
+        search={filters.search}
         setSearch={setSearch}
-        filterBy={filterBy}
+        filterBy={filters.filterBy}
         setFilterBy={setFilterBy}
       />
       <List data={data} />
       <Pagination
-        page={page}
-        itemsPerPage={itemsPerPage}
+        page={filters.page}
+        itemsPerPage={filters.itemsPerPage}
         setPage={setPage}
         setItemsPerPage={setItemsPerPage}
+        totalPages={totalPages}
       />
     </div>
   );
@@ -41,9 +39,12 @@ const Manager = ({ rawData }) => {
 const getData = (rawData, { search, filterBy, page, itemsPerPage }) => {
   let dataFiltered = searchByName(rawData, search);
   dataFiltered = filterByCategory(dataFiltered, filterBy);
+
+  const totalPages = Math.ceil(dataFiltered.length / itemsPerPage);
+
   dataFiltered = paginate(dataFiltered, page, itemsPerPage);
 
-  return dataFiltered;
+  return { data: dataFiltered, totalPages };
 };
 
 export default Manager;

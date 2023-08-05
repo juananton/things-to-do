@@ -1,9 +1,14 @@
-import SearchIcon from './Icons/SearchIcon';
-import IconButton from './buttons/IconButton';
+import style from './Pagination.module.css';
+import PageSelector from './forms/PageSelector';
 import Select from './forms/Select';
-import style from './pagination.module.css';
 
-const Pagination = ({ page, itemsPerPage, setPage, setItemsPerPage }) => {
+const Pagination = ({
+  page,
+  itemsPerPage,
+  setPage,
+  setItemsPerPage,
+  totalPages,
+}) => {
   return (
     <div className={style.wrapper}>
       <div className={style.itemsPerPage}>
@@ -17,9 +22,7 @@ const Pagination = ({ page, itemsPerPage, setPage, setItemsPerPage }) => {
         </Select>
         <p>Elementos por página</p>
       </div>
-      <div className={style.pages}>
-        <IconButton kind='red' filled icon={SearchIcon} />
-      </div>
+      <PageSelector page={page} setPage={setPage} totalPages={totalPages} />
     </div>
   );
 };
