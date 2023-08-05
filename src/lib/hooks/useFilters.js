@@ -33,6 +33,7 @@ export const useFilters = () => {
   const setItemsPerPage = newItemsPerPage => {
     setFilters({
       ...filters,
+      page: 1,
       itemsPerPage: newItemsPerPage,
     });
   };
