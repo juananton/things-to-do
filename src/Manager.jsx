@@ -37,13 +37,17 @@ const Manager = () => {
   );
 };
 
+const fetchRawData = async setRawData => {
+  const res = await fetch('http://localhost:4001/rawData');
+  const data = await res.json();
+  setRawData(data);
+};
+
 const useRawData = ({ search, filterBy, page, itemsPerPage }) => {
   const [rawData, setRawData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:4001/rawData')
-      .then(res => res.json())
-      .then(data => setRawData(data));
+    fetchRawData(setRawData);
   }, []);
 
   let filteredData = searchByName(rawData, search);
