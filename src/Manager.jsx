@@ -37,8 +37,8 @@ const Manager = () => {
   );
 };
 
-const fetchRawData = async setRawData => {
-  const res = await fetch('http://localhost:4001/rawData');
+const fetchRawData = async (setRawData, signal) => {
+  const res = await fetch('http://localhost:4001/rawData', { signal });
   const data = await res.json();
   setRawData(data);
 };
@@ -47,7 +47,11 @@ const useRawData = ({ search, filterBy, page, itemsPerPage }) => {
   const [rawData, setRawData] = useState([]);
 
   useEffect(() => {
-    fetchRawData(setRawData);
+    const controller = new AbortController();
+
+    fetchRawData(setRawData, controller.signal);
+
+    return () => controller.abort();
   }, []);
 
   let filteredData = searchByName(rawData, search);
