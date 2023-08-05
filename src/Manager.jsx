@@ -9,7 +9,7 @@ const Manager = () => {
   const { filters, setSearch, setFilterBy, setPage, setItemsPerPage } =
     useFilters();
 
-  const { paginatedData, totalPages } = useData(filters);
+  const { paginatedData, totalPages, error, loading } = useData(filters);
 
   return (
     <div className={style.wrapper}>
@@ -20,7 +20,7 @@ const Manager = () => {
         filterBy={filters.filterBy}
         setFilterBy={setFilterBy}
       />
-      <List paginatedData={paginatedData} />
+      <List paginatedData={paginatedData} error={error} loading={loading} />
       <Pagination
         page={filters.page}
         itemsPerPage={filters.itemsPerPage}

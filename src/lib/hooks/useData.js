@@ -5,10 +5,18 @@ import {
   searchByName,
 } from '../functions/filterFunctions';
 
-const fetchRawData = async (setRawData, signal) => {
-  const res = await fetch('http://localhost:4001/rawData', { signal });
-  const data = await res.json();
-  setRawData(data);
+const fetchRawData = async (setRawData, setError, signal) => {
+  try {
+    const res = await fetch('http://localhost:4001/rawData', { signal });
+    if (res.ok) {
+      const data = await res.json();
+      setRawData(data);
+    } else {
+      setError();
+    }
+  } catch (err) {
+    setError();
+  }
 };
 
 const getDataToDisplay = (
@@ -27,17 +35,31 @@ const getDataToDisplay = (
 };
 
 export const useData = filters => {
-  const [rawData, setRawData] = useState([]);
+  const [data, setData] = useState({
+    rawData: [],
+    error: false,
+    loading: true,
+  });
+
+  const setRawData = newData =>
+    setData({ rawData: newData, loading: false, error: false });
+
+  const setError = () => setData({ rawData: [], loading: false, error: true });
 
   useEffect(() => {
     const controller = new AbortController();
 
-    fetchRawData(setRawData, controller.signal);
+    fetchRawData(setRawData, setError, controller.signal);
 
     return () => controller.abort();
   }, []);
 
-  const { paginatedData, totalPages } = getDataToDisplay(rawData, filters);
+  const { paginatedData, totalPages } = getDataToDisplay(data.rawData, filters);
 
-  return { paginatedData, totalPages };
+  return {
+    paginatedData,
+    totalPages,
+    error: data.error,
+    loading: data.loading,
+  };
 };
