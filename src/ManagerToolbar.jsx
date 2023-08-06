@@ -1,9 +1,17 @@
 import style from './ManagerToolbar.module.css';
 import { ALL_CATEGORIES, CATEGORIES } from './constants/categories';
+import { SORT_OPTIONS } from './constants/sortOptions';
 import InputSearch from './forms/InputSearch';
 import Select from './forms/Select';
 
-const ManagerToolbar = ({ search, setSearch, filterBy, setFilterBy }) => {
+const ManagerToolbar = ({
+  search,
+  setSearch,
+  filterBy,
+  setFilterBy,
+  sortBy,
+  setSortBy,
+}) => {
   return (
     <form className={style.form}>
       <InputSearch
@@ -18,6 +26,14 @@ const ManagerToolbar = ({ search, setSearch, filterBy, setFilterBy }) => {
             {cat}
           </option>
         ))}
+      </Select>
+      <Select
+        value={sortBy}
+        onChange={ev => setSortBy(Number(ev.target.value))}
+      >
+        <option value={SORT_OPTIONS.DEFAULT}>Por defecto</option>
+        <option value={SORT_OPTIONS.NAME}>Por nombre</option>
+        <option value={SORT_OPTIONS.TIME}>Por tiempo</option>
       </Select>
     </form>
   );

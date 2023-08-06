@@ -6,8 +6,14 @@ import { useData } from './lib/hooks/useData';
 import { useFilters } from './lib/hooks/useFilters';
 
 const Manager = () => {
-  const { filters, setSearch, setFilterBy, setPage, setItemsPerPage } =
-    useFilters();
+  const {
+    filters,
+    setSearch,
+    setFilterBy,
+    setSortBy,
+    setPage,
+    setItemsPerPage,
+  } = useFilters();
 
   const { paginatedData, totalPages, error, loading } = useData(filters);
 
@@ -19,6 +25,8 @@ const Manager = () => {
         setSearch={setSearch}
         filterBy={filters.filterBy}
         setFilterBy={setFilterBy}
+        sortBy={filters.sortBy}
+        setSortBy={setSortBy}
       />
       <List paginatedData={paginatedData} error={error} loading={loading} />
       <Pagination

@@ -3,6 +3,7 @@ import {
   filterByCategory,
   paginate,
   searchByName,
+  sortData,
 } from '../functions/filterFunctions';
 
 const fetchRawData = async (setRawData, setError, signal) => {
@@ -21,10 +22,12 @@ const fetchRawData = async (setRawData, setError, signal) => {
 
 const getDataToDisplay = (
   rawData,
-  { search, filterBy, page, itemsPerPage }
+  { search, filterBy, sortBy, page, itemsPerPage }
 ) => {
   let filteredData = searchByName(rawData, search);
   filteredData = filterByCategory(filteredData, filterBy);
+  filteredData = sortData(filteredData, sortBy);
+
   const { paginatedData, totalPages } = paginate(
     filteredData,
     page,

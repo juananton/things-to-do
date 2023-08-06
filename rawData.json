@@ -31,6 +31,54 @@
       "preparation": "Instrucciones de preparación",
       "time": "30",
       "category": "Snack"
+    },
+    {
+      "id": 4,
+      "name": "Natillas",
+      "ingredients": "Listado de ingredientes",
+      "preparation": "Instrucciones de preparación",
+      "time": "45",
+      "category": "Postre"
+    },
+    {
+      "id": 5,
+      "name": "Hummus con verduras",
+      "ingredients": "Listado de ingredientes",
+      "preparation": "Instrucciones de preparación",
+      "time": "30",
+      "category": "Snack"
+    },
+    {
+      "id": 6,
+      "name": "Mousse de chocolate",
+      "ingredients": "Listado de ingredientes",
+      "preparation": "Instrucciones de preparación",
+      "time": "25",
+      "category": "Postre"
+    },
+    {
+      "id": 7,
+      "name": "Lasaña de verduras",
+      "ingredients": "Listado de ingredientes",
+      "preparation": "Instrucciones de preparación",
+      "time": "30",
+      "category": "Principal"
+    },
+    {
+      "id": 8,
+      "name": "Guacamole",
+      "ingredients": "Listado de ingredientes",
+      "preparation": "Instrucciones de preparación",
+      "time": "25",
+      "category": "Snack"
+    },
+    {
+      "id": 9,
+      "name": "Tortilla de patatas",
+      "ingredients": "Listado de ingredientes",
+      "preparation": "Instrucciones de preparación",
+      "time": "30",
+      "category": "Principal"
     }
   ]
 }
