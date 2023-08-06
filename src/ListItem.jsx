@@ -4,7 +4,7 @@ import style from './ListItem.module.css';
 
 const ListItem = ({ item }) => {
   return (
-    <div className={style.row}>
+    <li className={style.row}>
       <div className={style.name}>
         <ItemDisplay item={item} />
       </div>
@@ -14,7 +14,7 @@ const ListItem = ({ item }) => {
       <div className={style.tools}>
         <span>Editar</span>
       </div>
-    </div>
+    </li>
   );
 };
 
