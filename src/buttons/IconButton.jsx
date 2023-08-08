@@ -1,17 +1,16 @@
-import style from './IconButton.module.css';
+import { KIND_CLASSNAMES } from '../constants/buttonClassnames';
+import style from './Button.module.css';
 
-const CLASSNAMES = {
-  regular: style.regular,
-  error: style.error,
-};
-
-const IconButton = ({ kind = 'regular', icon: Icon, className, ...props }) => {
-  const kindClassName = CLASSNAMES[kind];
-
+const IconButton = ({
+  kind = 'secondary',
+  icon: Icon,
+  className,
+  ...props
+}) => {
   return (
     <button
       {...props}
-      className={`${style.button} ${kindClassName} ${className}`}
+      className={`${style.button} ${style.iconButton} ${KIND_CLASSNAMES[kind]} ${className}`}
     >
       <Icon className={style.icon}></Icon>
     </button>
