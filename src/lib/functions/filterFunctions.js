@@ -20,16 +20,16 @@ export const filterByCategory = (data, filterBy) => {
 export const sortData = (data, sortBy) => {
   const sortedData = [...data];
   switch (sortBy) {
+    case SORT_OPTIONS.DATE:
+      return sortedData.sort((a, b) => {
+        if (a.time > b.time) return 1;
+        if (a.time < b.time) return -1;
+        return 0;
+      });
     case SORT_OPTIONS.NAME:
       return sortedData.sort((a, b) => {
         if (a.name > b.name) return 1;
         if (a.name < b.name) return -1;
-        return 0;
-      });
-    case SORT_OPTIONS.TIME:
-      return sortedData.sort((a, b) => {
-        if (a.time > b.time) return 1;
-        if (a.time < b.time) return -1;
         return 0;
       });
     default:

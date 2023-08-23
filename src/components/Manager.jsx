@@ -19,7 +19,7 @@ const Manager = () => {
 
   return (
     <div className={style.wrapper}>
-      <h1 className={style.title}>Recetas</h1>
+      <h1 className={style.title}>Things to do</h1>
       <ManagerToolbar
         search={filters.search}
         setSearch={setSearch}

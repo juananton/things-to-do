@@ -4,14 +4,15 @@
   padding: 0.75rem 0;
   border-top: 1px solid var(--color-lightgray);
   align-items: center;
+  gap: 1rem;
 }
 
 .name {
-  width: 60%;
+  width: 68%;
 }
 
 .category {
-  width: 20%;
+  width: 10%;
   font-size: 0.875rem;
 
   display: flex;
@@ -19,8 +20,9 @@
 }
 
 .tools {
-  width: 20%;
+  width: 10%;
 
   display: flex;
   justify-content: flex-end;
+  gap: 1rem;
 }

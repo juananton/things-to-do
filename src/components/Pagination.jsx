@@ -1,6 +1,6 @@
 import style from './Pagination.module.css';
-import PageSelector from './forms/PageSelector';
-import Select from './forms/Select';
+import PageSelector from './form-controls/PageSelector';
+import Select from './form-controls/Select';
 
 const Pagination = ({
   page,
@@ -20,7 +20,7 @@ const Pagination = ({
           <option value={6}>6</option>
           <option value={8}>8</option>
         </Select>
-        <p>Elementos por página</p>
+        <p>Items per page</p>
       </div>
       <PageSelector page={page} setPage={setPage} totalPages={totalPages} />
     </div>

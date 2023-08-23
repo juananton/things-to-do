@@ -1,7 +1,7 @@
 export const CATEGORIES = {
-  CAT1: 'Principal',
-  CAT2: 'Postre',
-  CAT3: 'Snack',
+  CAT1: 'Personal',
+  CAT2: 'Work',
+  CAT3: 'Home',
 };
 
-export const ALL_CATEGORIES = 'Todas';
+export const ALL_CATEGORIES = 'All';

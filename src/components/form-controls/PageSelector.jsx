@@ -15,7 +15,7 @@ const PageSelector = ({ page, setPage, totalPages }) => {
         onClick={() => setPage(page - 1)}
       />
       <p>
-        Página {page} de {totalPages || 1}
+        Page {page} of {totalPages || 1}
       </p>
       <IconButton
         disabled={isLastPage}

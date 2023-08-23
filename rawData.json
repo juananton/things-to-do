@@ -2,83 +2,63 @@
   "rawData": [
     {
       "id": 0,
-      "name": "Lentejas",
-      "ingredients": "Listado de ingredientes",
-      "preparation": "Instrucciones de preparación",
-      "time": "45",
-      "category": "Principal"
+      "name": "Recoger coche del taller",
+      "date": "21/2/2023",
+      "category": "Personal"
     },
     {
       "id": 1,
-      "name": "Yogur con frutas",
-      "ingredients": "Listado de ingredientes",
-      "preparation": "Instrucciones de preparación",
-      "time": "30",
-      "category": "Postre"
+      "name": "Pagar IBI 2023",
+      "date": "16/3/2023",
+      "category": "Home"
     },
     {
       "id": 2,
-      "name": "Bacalao con pimientos",
-      "ingredients": "Listado de ingredientes",
-      "preparation": "Instrucciones de preparación",
-      "time": "25",
-      "category": "Principal"
+      "name": "Apuntarme al gimnasio",
+      "date": "14/4/2023",
+      "category": "Personal"
     },
     {
       "id": 3,
-      "name": "Verduras con bacalao",
-      "ingredients": "Listado de ingredientes",
-      "preparation": "Instrucciones de preparación",
-      "time": "30",
-      "category": "Snack"
+      "name": "Preparar presentación",
+      "date": "23/4/2023",
+      "category": "Work"
     },
     {
       "id": 4,
-      "name": "Natillas",
-      "ingredients": "Listado de ingredientes",
-      "preparation": "Instrucciones de preparación",
-      "time": "45",
-      "category": "Postre"
+      "name": "Arreglar lavavajillas",
+      "date": "8/5/2023",
+      "category": "Home"
     },
     {
       "id": 5,
-      "name": "Hummus con verduras",
-      "ingredients": "Listado de ingredientes",
-      "preparation": "Instrucciones de preparación",
-      "time": "30",
-      "category": "Snack"
+      "name": "Terminar proyecto ecommerce",
+      "date": "19/5/2023",
+      "category": "Work"
     },
     {
       "id": 6,
-      "name": "Mousse de chocolate",
-      "ingredients": "Listado de ingredientes",
-      "preparation": "Instrucciones de preparación",
-      "time": "25",
-      "category": "Postre"
+      "name": "Llamar al fontanero",
+      "date": "1/6/2023",
+      "category": "Home"
     },
     {
       "id": 7,
-      "name": "Lasaña de verduras",
-      "ingredients": "Listado de ingredientes",
-      "preparation": "Instrucciones de preparación",
-      "time": "30",
-      "category": "Principal"
+      "name": "Pedir cita con dentista",
+      "date": "12/6/2023",
+      "category": "Personal"
     },
     {
       "id": 8,
-      "name": "Guacamole",
-      "ingredients": "Listado de ingredientes",
-      "preparation": "Instrucciones de preparación",
-      "time": "25",
-      "category": "Snack"
+      "name": "Ordenar carpetas",
+      "date": "27/7/2023",
+      "category": "Work"
     },
     {
       "id": 9,
-      "name": "Tortilla de patatas",
-      "ingredients": "Listado de ingredientes",
-      "preparation": "Instrucciones de preparación",
-      "time": "30",
-      "category": "Principal"
+      "name": "Preparar vacaciones",
+      "date": "23/8/2023",
+      "category": "Personal"
     }
   ]
 }
