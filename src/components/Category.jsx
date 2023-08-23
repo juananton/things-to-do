@@ -1,5 +1,5 @@
+import { CATEGORIES } from '../constants/categories';
 import style from './Category.module.css';
-import { CATEGORIES } from './constants/categories';
 
 const CATEGORY_STYLES = {
   [CATEGORIES.CAT1]: [CATEGORIES.CAT1, style.principal],

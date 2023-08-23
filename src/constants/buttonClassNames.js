@@ -1,4 +1,4 @@
-import style from '../buttons/Button.module.css';
+import style from '../components/buttons/Button.module.css';
 
 export const KIND_CLASSNAMES = {
   primary: style.primary,

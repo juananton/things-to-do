@@ -1,4 +1,4 @@
-import Manager from './Manager';
+import Manager from './components/Manager';
 
 function App() {
   return <Manager />;

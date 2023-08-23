@@ -1,6 +1,6 @@
+import { ALL_CATEGORIES, CATEGORIES } from '../constants/categories';
+import { SORT_OPTIONS } from '../constants/sortOptions';
 import style from './ManagerToolbar.module.css';
-import { ALL_CATEGORIES, CATEGORIES } from './constants/categories';
-import { SORT_OPTIONS } from './constants/sortOptions';
 import InputSearch from './forms/InputSearch';
 import Select from './forms/Select';
 

@@ -1,4 +1,4 @@
-import { KIND_CLASSNAMES } from '../constants/buttonClassnames';
+import { KIND_CLASSNAMES } from '../../constants/buttonClassnames';
 import style from './Button.module.css';
 
 const IconButton = ({
