@@ -8,11 +8,11 @@
 }
 
 .name {
-  width: 68%;
+  width: 53%;
 }
 
 .category {
-  width: 10%;
+  width: 20%;
   font-size: 0.875rem;
 
   display: flex;
@@ -20,7 +20,7 @@
 }
 
 .tools {
-  width: 10%;
+  width: 15%;
 
   display: flex;
   justify-content: flex-end;

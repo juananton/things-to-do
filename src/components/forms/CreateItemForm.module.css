@@ -1,0 +1,10 @@
+.form {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.thing {
+  width: 61%;
+}

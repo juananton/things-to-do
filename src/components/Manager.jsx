@@ -4,6 +4,7 @@ import List from './List';
 import style from './Manager.module.css';
 import ManagerToolbar from './ManagerToolbar';
 import Pagination from './Pagination';
+import Button from './buttons/Button';
 
 const Manager = () => {
   const {
@@ -19,7 +20,10 @@ const Manager = () => {
 
   return (
     <div className={style.wrapper}>
-      <h1 className={style.title}>Things to do</h1>
+      <header className={style.header}>
+        <h1 className={style.title}>Things to do</h1>{' '}
+        <Button kind='primary'>New thing</Button>
+      </header>
       <ManagerToolbar
         search={filters.search}
         setSearch={setSearch}

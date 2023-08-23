@@ -5,6 +5,12 @@
   padding: 0 1rem;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+}
 .title {
   font-size: var(--title-1);
 }

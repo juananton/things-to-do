@@ -1,5 +1,6 @@
 import Category from './Category';
 import PencilIcon from './Icons/PencilIcon';
+import TrashIcon from './Icons/TrashIcon';
 import ItemDisplay from './ItemDisplay';
 import style from './ListItem.module.css';
 import IconButton from './buttons/IconButton';
@@ -17,6 +18,7 @@ const ListItem = ({ item }) => {
       </div>
       <div className={style.tools}>
         <IconButton icon={PencilIcon} />
+        <IconButton icon={TrashIcon} />
       </div>
     </li>
   );
