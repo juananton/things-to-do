@@ -1,10 +1,22 @@
 .form {
-  display: flex;
-  align-items: flex-end;
   margin-bottom: 1.5rem;
+}
+
+.row {
+  display: flex;
   gap: 1rem;
 }
 
-.thing {
-  width: 61%;
+.row ~ .row {
+  margin-top: 1rem;
+}
+
+.inputs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  width: 79%;
 }

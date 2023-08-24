@@ -2,61 +2,61 @@
   "rawData": [
     {
       "id": 0,
-      "name": "Recoger coche del taller",
+      "description": "Recoger coche del taller",
       "date": "21/2/2023",
       "category": "Personal"
     },
     {
       "id": 1,
-      "name": "Pagar IBI 2023",
+      "description": "Pagar IBI 2023",
       "date": "16/3/2023",
       "category": "Home"
     },
     {
       "id": 2,
-      "name": "Apuntarme al gimnasio",
+      "description": "Apuntarme al gimnasio",
       "date": "14/4/2023",
       "category": "Personal"
     },
     {
       "id": 3,
-      "name": "Preparar presentación",
+      "description": "Preparar presentación",
       "date": "23/4/2023",
       "category": "Work"
     },
     {
       "id": 4,
-      "name": "Arreglar lavavajillas",
+      "description": "Arreglar lavavajillas",
       "date": "8/5/2023",
       "category": "Home"
     },
     {
       "id": 5,
-      "name": "Terminar proyecto ecommerce",
+      "description": "Terminar proyecto ecommerce",
       "date": "19/5/2023",
       "category": "Work"
     },
     {
       "id": 6,
-      "name": "Llamar al fontanero",
+      "description": "Llamar al fontanero",
       "date": "1/6/2023",
       "category": "Home"
     },
     {
       "id": 7,
-      "name": "Pedir cita con dentista",
+      "description": "Pedir cita con dentista",
       "date": "12/6/2023",
       "category": "Personal"
     },
     {
       "id": 8,
-      "name": "Ordenar carpetas",
+      "description": "Ordenar carpetas",
       "date": "27/7/2023",
       "category": "Work"
     },
     {
       "id": 9,
-      "name": "Preparar vacaciones",
+      "description": "Preparar vacaciones",
       "date": "23/8/2023",
       "category": "Personal"
     }

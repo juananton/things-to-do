@@ -5,6 +5,7 @@ import style from './Manager.module.css';
 import ManagerToolbar from './ManagerToolbar';
 import Pagination from './Pagination';
 import Button from './buttons/Button';
+import CreateItemForm from './forms/CreateItemForm';
 
 const Manager = () => {
   const {
@@ -24,6 +25,7 @@ const Manager = () => {
         <h1 className={style.title}>Things to do</h1>{' '}
         <Button kind='primary'>New thing</Button>
       </header>
+      <CreateItemForm />
       <ManagerToolbar
         search={filters.search}
         setSearch={setSearch}
